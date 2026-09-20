@@ -1,0 +1,196 @@
+.video-recorder-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  background: var(--color-navy-light);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.video-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.video-title-area {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.video-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: var(--color-blue-subtle);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-glow);
+}
+
+.video-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.video-status-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.duration-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.duration-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  font-weight: 600;
+}
+
+.duration-select {
+  background: var(--color-navy);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  outline: none;
+}
+
+/* Banner de Grabación Activa */
+.recording-live-banner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.recording-badge-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 800;
+  font-size: var(--font-size-sm);
+  color: var(--color-danger);
+  letter-spacing: 0.1em;
+}
+
+.rec-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  animation: pulse-dot 1s ease infinite;
+}
+
+.recording-timer {
+  font-family: monospace;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.recording-progress-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.recording-progress-fill {
+  height: 100%;
+  background: var(--color-danger);
+  transition: width 0.5s linear;
+}
+
+.video-error-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+}
+
+/* Previsualización del video */
+.recorded-preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: var(--space-4);
+}
+
+.preview-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+}
+
+.preview-label {
+  color: var(--color-gray-300);
+  font-weight: 600;
+}
+
+.video-player-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recorded-video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.preview-meta {
+  background: var(--color-navy);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+}
+
+.meta-title {
+  color: var(--color-gray-400);
+}
+
+.meta-text {
+  color: var(--color-gray-200);
+  font-weight: 600;
+}

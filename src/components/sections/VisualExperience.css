@@ -1,0 +1,23 @@
+.visual-experience-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.visual-main-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-side-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .visual-experience-layout {
+    grid-template-columns: 1fr;
+  }
+}

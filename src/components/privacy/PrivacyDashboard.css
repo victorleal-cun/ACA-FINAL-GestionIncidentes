@@ -1,0 +1,188 @@
+.privacy-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  background: var(--color-navy-light);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+}
+
+.privacy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.privacy-title-area {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.privacy-shield-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: var(--color-blue-subtle);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-glow);
+}
+
+.privacy-title {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.privacy-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+
+/* Metrics Grid */
+.privacy-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.privacy-metric-card {
+  background: var(--color-navy);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  position: relative;
+}
+
+.metric-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-glow);
+  flex-shrink: 0;
+}
+
+.metric-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-grow: 1;
+}
+
+.metric-label {
+  font-size: 11px;
+  color: var(--color-gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.metric-counter {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+/* Status Pills */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  padding: 1px 8px;
+  width: fit-content;
+}
+
+.status-pill-active {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.status-pill-warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.status-pill-danger {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.status-pill-inactive {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-gray-400);
+}
+
+/* Controls bar */
+.privacy-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.controls-bar-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  font-weight: 600;
+}
+
+.controls-btn-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.confirm-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(239, 68, 68, 0.1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.confirm-text {
+  font-size: 11px;
+  color: #fca5a5;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .privacy-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .privacy-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .privacy-controls-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

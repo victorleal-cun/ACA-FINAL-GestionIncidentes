@@ -1,0 +1,58 @@
+.privacy-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.principle-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  background: var(--color-navy);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.principle-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.principle-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: var(--color-blue-subtle);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-glow);
+  margin-bottom: var(--space-4);
+}
+
+.principle-card h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.principle-card p {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-300);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 1024px) {
+  .privacy-principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .privacy-principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
